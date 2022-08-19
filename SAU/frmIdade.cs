@@ -32,7 +32,7 @@ namespace SAU
                 idadeUsuario = Convert.ToInt32(txtIdade.Text);
 
                 // Apresentação do valor das variáveis
-                MessageBox.Show("Nome: " + nomeUsuario.ToString() + " e idade " + idadeUsuario.ToString());
+                MessageBox.Show("Nome: " + nomeUsuario.ToString() + " e Idade " + idadeUsuario.ToString(),"Resultado",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
 
             else

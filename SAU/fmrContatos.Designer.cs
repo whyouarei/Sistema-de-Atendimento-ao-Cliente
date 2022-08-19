@@ -50,9 +50,13 @@ namespace SAU
             this.txtNumeroEndereco = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtUF = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.grpContatos = new System.Windows.Forms.GroupBox();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.lstContatos = new System.Windows.Forms.ListBox();
+            this.mskCep = new System.Windows.Forms.MaskedTextBox();
+            this.grpContatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNome
@@ -115,6 +119,7 @@ namespace SAU
             this.btnListar.TabIndex = 10;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnLimpar
             // 
@@ -264,15 +269,6 @@ namespace SAU
             this.txtUF.Size = new System.Drawing.Size(100, 26);
             this.txtUF.TabIndex = 5;
             // 
-            // txtCep
-            // 
-            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(159, 179);
-            this.txtCep.MaxLength = 8;
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(119, 26);
-            this.txtCep.TabIndex = 6;
-            // 
             // txtTelefone
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,14 +287,58 @@ namespace SAU
             this.txtEmail.Size = new System.Drawing.Size(252, 26);
             this.txtEmail.TabIndex = 8;
             // 
+            // grpContatos
+            // 
+            this.grpContatos.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.grpContatos.Controls.Add(this.lstContatos);
+            this.grpContatos.Controls.Add(this.btnFechar);
+            this.grpContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpContatos.Location = new System.Drawing.Point(193, 12);
+            this.grpContatos.Name = "grpContatos";
+            this.grpContatos.Size = new System.Drawing.Size(430, 283);
+            this.grpContatos.TabIndex = 101;
+            this.grpContatos.TabStop = false;
+            this.grpContatos.Text = "Relação de Contatos";
+            this.grpContatos.Visible = false;
+            this.grpContatos.Enter += new System.EventHandler(this.grpContatos_Enter);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Location = new System.Drawing.Point(349, 243);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(75, 34);
+            this.btnFechar.TabIndex = 0;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // lstContatos
+            // 
+            this.lstContatos.FormattingEnabled = true;
+            this.lstContatos.ItemHeight = 20;
+            this.lstContatos.Location = new System.Drawing.Point(17, 32);
+            this.lstContatos.Name = "lstContatos";
+            this.lstContatos.Size = new System.Drawing.Size(391, 204);
+            this.lstContatos.TabIndex = 1;
+            // 
+            // mskCep
+            // 
+            this.mskCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCep.Location = new System.Drawing.Point(159, 179);
+            this.mskCep.Mask = "#####-###";
+            this.mskCep.Name = "mskCep";
+            this.mskCep.Size = new System.Drawing.Size(100, 26);
+            this.mskCep.TabIndex = 6;
+            this.mskCep.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mskCep_MouseClick);
+            // 
             // fmrContatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 307);
+            this.Controls.Add(this.grpContatos);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtUF);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtNumeroEndereco);
@@ -320,8 +360,10 @@ namespace SAU
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.mskCep);
             this.Name = "fmrContatos";
             this.Text = "Cadastro de Contatos";
+            this.grpContatos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,8 +392,11 @@ namespace SAU
         private System.Windows.Forms.TextBox txtNumeroEndereco;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtUF;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.GroupBox grpContatos;
+        private System.Windows.Forms.ListBox lstContatos;
+        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.MaskedTextBox mskCep;
     }
 }
