@@ -95,6 +95,12 @@
     <Compile Include="fmrContatos.Designer.cs">
       <DependentUpon>fmrContatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcesso.Designer.cs">
+      <DependentUpon>frmAcesso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChamados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fmrContatos.resx">
       <DependentUpon>fmrContatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcesso.resx">
+      <DependentUpon>frmAcesso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChamados.resx">
       <DependentUpon>frmChamados.cs</DependentUpon>

@@ -53,8 +53,8 @@ namespace SAU
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.grpContatos = new System.Windows.Forms.GroupBox();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.lstContatos = new System.Windows.Forms.ListBox();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.mskCep = new System.Windows.Forms.MaskedTextBox();
             this.grpContatos.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,7 @@ namespace SAU
             this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnListar
             // 
@@ -302,6 +303,15 @@ namespace SAU
             this.grpContatos.Visible = false;
             this.grpContatos.Enter += new System.EventHandler(this.grpContatos_Enter);
             // 
+            // lstContatos
+            // 
+            this.lstContatos.FormattingEnabled = true;
+            this.lstContatos.ItemHeight = 20;
+            this.lstContatos.Location = new System.Drawing.Point(17, 32);
+            this.lstContatos.Name = "lstContatos";
+            this.lstContatos.Size = new System.Drawing.Size(391, 204);
+            this.lstContatos.TabIndex = 1;
+            // 
             // btnFechar
             // 
             this.btnFechar.Location = new System.Drawing.Point(349, 243);
@@ -311,15 +321,6 @@ namespace SAU
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // lstContatos
-            // 
-            this.lstContatos.FormattingEnabled = true;
-            this.lstContatos.ItemHeight = 20;
-            this.lstContatos.Location = new System.Drawing.Point(17, 32);
-            this.lstContatos.Name = "lstContatos";
-            this.lstContatos.Size = new System.Drawing.Size(391, 204);
-            this.lstContatos.TabIndex = 1;
             // 
             // mskCep
             // 

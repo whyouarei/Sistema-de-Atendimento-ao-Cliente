@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using TransferenciaDados;
+
 namespace SAU
 {
     public partial class fmrContatos : Form
@@ -120,6 +122,25 @@ namespace SAU
         private void mskCep_MouseClick(object sender, MouseEventArgs e)
         {
             mskCep.Select(0, 0);
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            SalvarContatos salvarContatos = new SalvarContatos();
+            ContatosDTO dados = new ContatosDTO();
+
+            // Popular a classe
+
+            dados.nome = txtNome.Text;
+            dados.endereco = txtEndereco.Text;
+            dados.numero = Convert.ToInt32(txtNumeroEndereco.Text);
+            dados.bairro = txtBairro.Text;
+            dados.cidade = txtCidade.Text;
+            dados.uf = txtUF.Text;
+            dados.cep = mskCep.Text;
+            dados.telefone = txtTelefone.Text;
+            dados.email = txtEmail.Text;
+
         }
     }
 }
