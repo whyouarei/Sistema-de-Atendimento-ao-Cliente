@@ -66,7 +66,7 @@ namespace SAU
             this.lblNome.Location = new System.Drawing.Point(19, 86);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(134, 20);
-            this.lblNome.TabIndex = 0;
+            this.lblNome.TabIndex = 13;
             this.lblNome.Text = "Nome do Contato";
             this.lblNome.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -77,7 +77,7 @@ namespace SAU
             this.lblEndereco.Location = new System.Drawing.Point(19, 118);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(78, 20);
-            this.lblEndereco.TabIndex = 1;
+            this.lblEndereco.TabIndex = 14;
             this.lblEndereco.Text = "Endereço";
             // 
             // txtNome
@@ -151,7 +151,7 @@ namespace SAU
             this.lblCodigo.Location = new System.Drawing.Point(19, 54);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(120, 20);
-            this.lblCodigo.TabIndex = 6;
+            this.lblCodigo.TabIndex = 101;
             this.lblCodigo.Text = "Código Contato";
             // 
             // lblNumeroEndereco
@@ -171,7 +171,7 @@ namespace SAU
             this.lblBairro.Location = new System.Drawing.Point(19, 149);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(51, 20);
-            this.lblBairro.TabIndex = 8;
+            this.lblBairro.TabIndex = 15;
             this.lblBairro.Text = "Bairro";
             // 
             // lblCidade
@@ -201,7 +201,7 @@ namespace SAU
             this.lblCep.Location = new System.Drawing.Point(19, 182);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(41, 20);
-            this.lblCep.TabIndex = 11;
+            this.lblCep.TabIndex = 16;
             this.lblCep.Text = "CEP";
             // 
             // lblTelefone
@@ -211,7 +211,7 @@ namespace SAU
             this.lblTelefone.Location = new System.Drawing.Point(19, 214);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(71, 20);
-            this.lblTelefone.TabIndex = 12;
+            this.lblTelefone.TabIndex = 17;
             this.lblTelefone.Text = "Telefone";
             // 
             // lblEmail
@@ -251,6 +251,7 @@ namespace SAU
             this.txtNumeroEndereco.Name = "txtNumeroEndereco";
             this.txtNumeroEndereco.Size = new System.Drawing.Size(100, 26);
             this.txtNumeroEndereco.TabIndex = 2;
+            this.txtNumeroEndereco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroEndereco_KeyPress);
             // 
             // txtCidade
             // 
@@ -294,7 +295,7 @@ namespace SAU
             this.grpContatos.Controls.Add(this.lstContatos);
             this.grpContatos.Controls.Add(this.btnFechar);
             this.grpContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpContatos.Location = new System.Drawing.Point(193, 12);
+            this.grpContatos.Location = new System.Drawing.Point(211, 12);
             this.grpContatos.Name = "grpContatos";
             this.grpContatos.Size = new System.Drawing.Size(430, 283);
             this.grpContatos.TabIndex = 101;
