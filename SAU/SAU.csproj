@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TratamentoCampos.cs" />
     <EmbeddedResource Include="fmrContatos.resx">
       <DependentUpon>fmrContatos.cs</DependentUpon>
     </EmbeddedResource>

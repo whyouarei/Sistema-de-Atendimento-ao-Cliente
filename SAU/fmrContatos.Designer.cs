@@ -312,6 +312,7 @@ namespace SAU
             this.lstContatos.Name = "lstContatos";
             this.lstContatos.Size = new System.Drawing.Size(391, 204);
             this.lstContatos.TabIndex = 1;
+            this.lstContatos.Click += new System.EventHandler(this.lstContatos_Click);
             // 
             // btnFechar
             // 
