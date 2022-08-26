@@ -87,6 +87,7 @@
     <Compile Include="ContatosDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestarDTO.cs" />
+    <Compile Include="UsuariosDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

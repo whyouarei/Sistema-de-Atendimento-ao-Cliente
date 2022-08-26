@@ -93,11 +93,12 @@ namespace SAU
             // Tornar invisível o grpContatos
 
             grpContatos.Visible = false;
+            
 
             // Desabilitar os demais campos
 
             tratamentoCampos.Desbloquear(this);
-
+            txtCodigo.Enabled = false;
 
 
         }
@@ -252,6 +253,9 @@ namespace SAU
                     btnFechar_Click(null, null);
                 }
             }
+            tratamentoCampos.Bloquear(this);
+            btnSalvar.Text = "Novo";
+            ncadastro = true;
         }
     }
 }
