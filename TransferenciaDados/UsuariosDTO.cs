@@ -43,8 +43,8 @@ namespace TransferenciaDados
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 // Parâmetros de entrada (InPut)
-                cmd.Parameters.AddWithValue("@pNomeUsuario", dados.nomeusuario);
-                cmd.Parameters.AddWithValue("@pSenhaUsuario", dados.senhausuario);
+                cmd.Parameters.AddWithValue("@pnomeusuario", dados.nomeusuario);
+                cmd.Parameters.AddWithValue("@psenhausuario", dados.senhausuario);
 
                 // Executar os comandos SQL
                 MySqlDataReader dr = cmd.ExecuteReader();
@@ -55,10 +55,20 @@ namespace TransferenciaDados
                     // Percorre os registros
                     while (dr.Read())
                     {
+                        // Verificar o retorno do parâmetro resultado
+                        int resultado = Convert.ToInt32(dr.GetValue(0).ToString());
+
+                        if (resultado > 0)
+                        { 
                         // Popular com o resultado
                         LoginSistema.usuario = dados.nomeusuario;
                         LoginSistema.nomecompleto = dr.GetValue(2).ToString();
                         dados.logado = Convert.ToInt32(dr.GetValue(1).ToString());
+                        }
+                        else
+                        {
+                            dados.logado = resultado;
+                        }
                     }
                 }
                 dr.Close();

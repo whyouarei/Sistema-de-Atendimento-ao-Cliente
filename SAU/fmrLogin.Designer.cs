@@ -41,9 +41,9 @@ namespace SAU
             this.mskNovaSenha = new System.Windows.Forms.MaskedTextBox();
             this.mskRepetirSenha = new System.Windows.Forms.MaskedTextBox();
             this.pnlMudarSenha = new System.Windows.Forms.Panel();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.pnlMudarSenha.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@ namespace SAU
             // 
             this.lblSenhaAtual.AutoSize = true;
             this.lblSenhaAtual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenhaAtual.Location = new System.Drawing.Point(12, 18);
+            this.lblSenhaAtual.Location = new System.Drawing.Point(113, 36);
             this.lblSenhaAtual.Name = "lblSenhaAtual";
             this.lblSenhaAtual.Size = new System.Drawing.Size(108, 20);
             this.lblSenhaAtual.TabIndex = 3;
@@ -91,7 +91,7 @@ namespace SAU
             // 
             this.lblNovaSenha.AutoSize = true;
             this.lblNovaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNovaSenha.Location = new System.Drawing.Point(12, 75);
+            this.lblNovaSenha.Location = new System.Drawing.Point(113, 93);
             this.lblNovaSenha.Name = "lblNovaSenha";
             this.lblNovaSenha.Size = new System.Drawing.Size(106, 20);
             this.lblNovaSenha.TabIndex = 4;
@@ -103,7 +103,7 @@ namespace SAU
             this.lblRepetirSenha.AutoEllipsis = true;
             this.lblRepetirSenha.AutoSize = true;
             this.lblRepetirSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRepetirSenha.Location = new System.Drawing.Point(12, 139);
+            this.lblRepetirSenha.Location = new System.Drawing.Point(113, 157);
             this.lblRepetirSenha.Name = "lblRepetirSenha";
             this.lblRepetirSenha.Size = new System.Drawing.Size(125, 20);
             this.lblRepetirSenha.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace SAU
             this.txtEmailUsuario.Location = new System.Drawing.Point(85, 58);
             this.txtEmailUsuario.Name = "txtEmailUsuario";
             this.txtEmailUsuario.Size = new System.Drawing.Size(325, 26);
-            this.txtEmailUsuario.TabIndex = 6;
+            this.txtEmailUsuario.TabIndex = 0;
             // 
             // mskSenha
             // 
@@ -124,34 +124,34 @@ namespace SAU
             this.mskSenha.Name = "mskSenha";
             this.mskSenha.PasswordChar = '*';
             this.mskSenha.Size = new System.Drawing.Size(325, 26);
-            this.mskSenha.TabIndex = 7;
+            this.mskSenha.TabIndex = 1;
             // 
             // mskSenhaAtual
             // 
             this.mskSenhaAtual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskSenhaAtual.Location = new System.Drawing.Point(16, 41);
+            this.mskSenhaAtual.Location = new System.Drawing.Point(117, 59);
             this.mskSenhaAtual.Name = "mskSenhaAtual";
             this.mskSenhaAtual.PasswordChar = '*';
             this.mskSenhaAtual.Size = new System.Drawing.Size(257, 26);
-            this.mskSenhaAtual.TabIndex = 8;
+            this.mskSenhaAtual.TabIndex = 4;
             // 
             // mskNovaSenha
             // 
             this.mskNovaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskNovaSenha.Location = new System.Drawing.Point(16, 98);
+            this.mskNovaSenha.Location = new System.Drawing.Point(117, 116);
             this.mskNovaSenha.Name = "mskNovaSenha";
             this.mskNovaSenha.PasswordChar = '*';
             this.mskNovaSenha.Size = new System.Drawing.Size(257, 26);
-            this.mskNovaSenha.TabIndex = 9;
+            this.mskNovaSenha.TabIndex = 5;
             // 
             // mskRepetirSenha
             // 
             this.mskRepetirSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskRepetirSenha.Location = new System.Drawing.Point(16, 162);
+            this.mskRepetirSenha.Location = new System.Drawing.Point(117, 180);
             this.mskRepetirSenha.Name = "mskRepetirSenha";
             this.mskRepetirSenha.PasswordChar = '*';
             this.mskRepetirSenha.Size = new System.Drawing.Size(257, 26);
-            this.mskRepetirSenha.TabIndex = 10;
+            this.mskRepetirSenha.TabIndex = 6;
             // 
             // pnlMudarSenha
             // 
@@ -163,10 +163,21 @@ namespace SAU
             this.pnlMudarSenha.Controls.Add(this.lblRepetirSenha);
             this.pnlMudarSenha.Controls.Add(this.lblNovaSenha);
             this.pnlMudarSenha.Controls.Add(this.lblSenhaAtual);
-            this.pnlMudarSenha.Location = new System.Drawing.Point(509, 27);
+            this.pnlMudarSenha.Location = new System.Drawing.Point(495, -1);
             this.pnlMudarSenha.Name = "pnlMudarSenha";
-            this.pnlMudarSenha.Size = new System.Drawing.Size(313, 283);
+            this.pnlMudarSenha.Size = new System.Drawing.Size(501, 324);
             this.pnlMudarSenha.TabIndex = 11;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Location = new System.Drawing.Point(217, 235);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 33);
+            this.btnAlterar.TabIndex = 7;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnOk
             // 
@@ -174,9 +185,10 @@ namespace SAU
             this.btnOk.Location = new System.Drawing.Point(85, 234);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 33);
-            this.btnOk.TabIndex = 12;
+            this.btnOk.TabIndex = 2;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnSair
             // 
@@ -184,35 +196,24 @@ namespace SAU
             this.btnSair.Location = new System.Drawing.Point(335, 234);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 33);
-            this.btnSair.TabIndex = 13;
+            this.btnSair.TabIndex = 3;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(116, 217);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 33);
-            this.btnAlterar.TabIndex = 11;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // fmrLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 322);
-            this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnOk);
+            this.ClientSize = new System.Drawing.Size(1094, 322);
             this.Controls.Add(this.pnlMudarSenha);
             this.Controls.Add(this.mskSenha);
             this.Controls.Add(this.txtEmailUsuario);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblmsgEmail);
             this.Controls.Add(this.lblEmailUsuario);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnOk);
             this.Name = "fmrLogin";
             this.Text = "fmrLogin";
             this.Load += new System.EventHandler(this.fmrLogin_Load);
